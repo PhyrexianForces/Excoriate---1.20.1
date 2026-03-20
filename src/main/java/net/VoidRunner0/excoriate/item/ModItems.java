@@ -19,6 +19,8 @@ public class ModItems {
             () -> new LivingMeatItem(new Item.Properties().food(ModFoodProperties.LIVING_CHICKEN)));
     public static final RegistryObject<Item> LIVING_MUTTON = ITEMS.register("living_mutton",
             () -> new LivingMeatItem(new Item.Properties().food(ModFoodProperties.LIVING_MUTTON)));
+    public static final RegistryObject<Item> LIVING_PORK = ITEMS.register("living_pork",
+            () -> new LivingMeatItem(new Item.Properties().food(ModFoodProperties.LIVING_PORK)));
 
     public static final RegistryObject<Item> DOLL = ITEMS.register("doll",
             () -> new DollItem(new Item.Properties()));

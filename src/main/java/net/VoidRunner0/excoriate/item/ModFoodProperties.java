@@ -20,4 +20,10 @@ public class ModFoodProperties {
             .saturationMod(0.3F)
             .meat()
             .build();
+
+    public static final FoodProperties LIVING_PORK = new FoodProperties.Builder()
+            .nutrition(3)
+            .saturationMod(0.3F)
+            .meat()
+            .build();
 }

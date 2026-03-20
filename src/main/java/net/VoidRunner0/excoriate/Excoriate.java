@@ -73,6 +73,7 @@ public class Excoriate
             event.accept(ModItems.LIVING_BEEF);
             event.accept(ModItems.LIVING_CHICKEN);
             event.accept(ModItems.LIVING_MUTTON);
+            event.accept(ModItems.LIVING_PORK);
         }
     }
 
