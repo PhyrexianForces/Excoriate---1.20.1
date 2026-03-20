@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "excoriate:item/doll"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "excoriate:unseen": 1
+      },
+      "model": "excoriate:item/unseen_doll"
+    },
+    {
+      "predicate": {
+        "excoriate:noticed": 1
+      },
+      "model": "excoriate:item/noticed_doll"
+    },
+    {
+      "predicate": {
+        "excoriate:watching": 1
+      },
+      "model": "excoriate:item/watching_doll"
+    },
+    {
+      "predicate": {
+        "excoriate:focused": 1
+      },
+      "model": "excoriate:item/focused_doll"
+    }
+  ]
+}
