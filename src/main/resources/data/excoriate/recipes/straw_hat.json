@@ -3,13 +3,13 @@
   "category": "misc",
   "key": {
     "H": {
-      "tag": "minecraft:hay_block"
+      "item": "minecraft:wheat"
     },
     "L": {
-      "tag": "minecraft:leather"
+      "item": "minecraft:leather"
     },
     "V": {
-      "tag": "excoriate:vile_wheat"
+      "item": "excoriate:vile_wheat"
     }
   },
   "pattern": [
