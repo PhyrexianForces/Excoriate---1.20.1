@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import net.VoidRunner0.excoriate.block.ModBlocks;
 import net.VoidRunner0.excoriate.item.ModItems;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -91,6 +93,7 @@ public class Excoriate
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             event.enqueueWork(() -> {
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.STRAW_HAT.get(), RenderType.cutout());
 
                 ItemProperties.register(
                         ModItems.DOLL.get(),
