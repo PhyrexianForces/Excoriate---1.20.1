@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "minecraft:hay_block"
+    },
+    "L": {
+      "tag": "minecraft:leather"
+    },
+    "V": {
+      "tag": "excoriate:vile_wheat"
+    }
+  },
+  "pattern": [
+    " V ",
+    "HLH"
+  ],
+  "result": {
+    "item": "excoriate:straw_hat"
+  },
+  "show_notification": true
+}

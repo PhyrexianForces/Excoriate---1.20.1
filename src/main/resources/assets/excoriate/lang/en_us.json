@@ -4,6 +4,8 @@
   "item.excoriate.living_mutton": "Raw Mutton",
   "item.excoriate.living_pork": "Raw Porkchop",
   "item.excoriate.doll": "Farmer Doll",
+  "item.excoriate.vile_wheat": "Wheat",
 
-  "block.excoriate.beef_block": "Block of Beef"
+  "block.excoriate.beef_block": "Block of Beef",
+  "block.excoriate.straw_hat": "Straw Hat"
 }

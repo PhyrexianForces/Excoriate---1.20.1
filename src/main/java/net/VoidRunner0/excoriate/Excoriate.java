@@ -39,16 +39,14 @@ import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Excoriate.MOD_ID)
-public class Excoriate
-{
+public class Excoriate {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "excoriate";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
 
-    public Excoriate(FMLJavaModLoadingContext context)
-    {
+    public Excoriate(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -64,18 +62,20 @@ public class Excoriate
     public class ModState {
         public static int Attention = 0;
     }
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
+
+    private void commonSetup(final FMLCommonSetupEvent event) {
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.LIVING_BEEF);
             event.accept(ModItems.LIVING_CHICKEN);
             event.accept(ModItems.LIVING_MUTTON);
             event.accept(ModItems.LIVING_PORK);
+        }
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.VILE_WHEAT);
         }
     }
 

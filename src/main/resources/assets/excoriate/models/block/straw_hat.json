@@ -4,7 +4,8 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "excoriate:block/straw_hat",
-		"particle": "minecraft:block/hay_block"
+      "particle": "excoriate:block/straw_hat"
+
 	},
 	"elements": [
 		{
