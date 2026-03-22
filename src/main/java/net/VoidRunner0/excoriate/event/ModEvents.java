@@ -10,7 +10,7 @@ import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -18,16 +18,31 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = Excoriate.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
     @SubscribeEvent
-    public static void onLivingDeath(LivingDeathEvent event) {
-        if (event.getEntity() instanceof Cow || event.getEntity() instanceof Chicken || event.getEntity() instanceof Sheep || event.getEntity() instanceof Pig) {
+    public static void onLivingDrops(LivingDropsEvent event) {
+        LivingEntity entity = event.getEntity();
+        Level level = entity.level();
+
+        if (entity instanceof Cow || entity instanceof Chicken || entity instanceof Sheep || entity instanceof Pig) {
+
             double random = Math.random();
-            if (random > 0.3) {
-                LivingEntity entity = event.getEntity();
-                Level level = entity.level();
-                ItemStack beef = new ItemStack(ModItems.LIVING_BEEF.get());
-                ItemStack chicken = new ItemStack(ModItems.LIVING_CHICKEN.get());
-                ItemStack mutton = new ItemStack(ModItems.LIVING_MUTTON.get());
-                ItemStack pork = new ItemStack(ModItems.LIVING_PORK.get());
+            if (random < 0.3) {
+
+                event.getDrops().clear();
+                ItemStack drop;
+
+                if (entity instanceof Cow) {
+                    drop = new ItemStack(ModItems.LIVING_BEEF.get());
+                } else if (entity instanceof Chicken) {
+                    drop = new ItemStack(ModItems.LIVING_CHICKEN.get());
+                } else if (entity instanceof Sheep) {
+                    drop = new ItemStack(ModItems.LIVING_MUTTON.get());
+                } else {
+                    drop = new ItemStack(ModItems.LIVING_PORK.get());
+                }
+
+                event.getDrops().add(
+                        new ItemEntity(level, entity.getX(), entity.getY(), entity.getZ(), drop)
+                );
             }
         }
     }
