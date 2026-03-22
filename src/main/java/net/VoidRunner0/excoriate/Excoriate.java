@@ -45,6 +45,7 @@ public class Excoriate {
 
     public class ModState {
         public static int Attention = 0;
+        public static boolean IsFarmerAlive = true;
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
