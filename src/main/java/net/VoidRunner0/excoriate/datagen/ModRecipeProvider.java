@@ -17,9 +17,6 @@ import java.util.function.BiFunction;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    private static final List<ItemLike> BEEF_COOKABLES = List.of(Items.COOKED_BEEF,
-            ModItems.LIVING_BEEF.get());
-
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -32,6 +29,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                .define('V', ModItems.VILE_WHEAT.get())
                .define('W', Items.WHEAT)
                .define('L', Items.LEATHER)
-               .unlockedBy(getHasName(ModItems.VILE_WHEAT.get()), has(ModItems.VILE_WHEAT.get()));
+               .unlockedBy(getHasName(ModItems.VILE_WHEAT.get()), has(ModItems.VILE_WHEAT.get()))
+               .save(pWriter);
     }
 }
