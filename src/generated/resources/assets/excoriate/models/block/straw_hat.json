@@ -4,8 +4,7 @@
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "excoriate:block/straw_hat",
-      "particle": "excoriate:block/straw_hat"
-
+		"particle": "excoriate:block/straw_hat"
 	},
 	"elements": [
 		{
@@ -17,8 +16,8 @@
 				"east": {"uv": [0, 0, 3.5, 0], "texture": "#0"},
 				"south": {"uv": [0, 0, 3.5, 0], "texture": "#0"},
 				"west": {"uv": [0, 0, 3.5, 0], "texture": "#0"},
-				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0", "cullface": "up"},
-				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0", "cullface": "down"}
+				"up": {"uv": [3.5, 3.5, 0, 0], "texture": "#0"},
+				"down": {"uv": [3.5, 3.5, 0, 7], "texture": "#0"}
 			}
 		},
 		{
