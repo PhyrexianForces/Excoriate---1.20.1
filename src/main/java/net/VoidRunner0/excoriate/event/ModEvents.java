@@ -55,4 +55,26 @@ public class ModEvents {
             }
         }
     }
+    //This is just a theoretical event here:
+    @SubscribeEvent
+    public static void onBlockDrops(BlockEvent.HarvestDropsEvent event) {
+        //Block block = event.getHarvestedBlock();
+        //Level level = block.level();
+        //BlockPos pos = block.getPos();
+
+        //if(block.creativeModTab.NATURAL_BLOCKS) {
+            //double random = Math.random();
+            //if(random < 0.2) {
+                //event.getDrops().clear();
+                //Itemstack drop;
+                //random = Math.random();
+                //if(random < 0.25) {
+                    //drop = new ItemStack(ModItems.LIVING_BEEF.get());
+                //}
+                //event.getDrops().add(
+                    //new ItemEntity(level, pos, drop)
+                //);
+            //}
+        //{
+    }
 }
