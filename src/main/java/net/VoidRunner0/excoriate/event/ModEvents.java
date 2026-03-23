@@ -46,4 +46,11 @@ public class ModEvents {
             }
         }
     }
+    @SubscribeEvent
+    public static void onBlockDrops(BlockDrops event) {
+        //Block block = event.getBlock
+        //Level level = block.level();
+
+        //if(block instanceof 
+    }
 }
