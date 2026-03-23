@@ -51,6 +51,19 @@ public class ModEvents {
         //Block block = event.getBlock
         //Level level = block.level();
 
-        //if(block instanceof 
+        //if(block.creativeModTab.NATURAL_BLOCKS) {
+            //double random = Math.random();
+            //if(random < 0.2) {
+                //event.getDrops().clear();
+                //Itemstack drop;
+                //random = Math.random();
+                //if(random < 0.25) {
+                    //drop = new ItemStack(ModItems.LIVING_BEEF.get());
+                //}
+                //event.getDrops().add(
+                    //new ItemEntity(level, block.getX(), block.getY(), block.getZ(), drop)
+                //);
+            //}
+        //{
     }
 }
