@@ -22,7 +22,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.LIVING_MUTTON);
         simpleItem(ModItems.LIVING_PORK);
 
-        simpleItem(ModItems.DOLL);
         simpleItem(ModItems.VILE_WHEAT);
     }
 
