@@ -24,16 +24,16 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
     protected void start() {
         add("beef_from_grass", new AddItemModifier(new LootItemCondition[]{
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
-                LootItemRandomChanceCondition.randomChance(0.05f).build()}, Items.BEEF));
+                LootItemRandomChanceCondition.randomChance(0.2f).build()}, Items.BEEF));
         add("chicken_from_grass", new AddItemModifier(new LootItemCondition[]{
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
-                LootItemRandomChanceCondition.randomChance(0.05f).build()}, Items.CHICKEN));
+                LootItemRandomChanceCondition.randomChance(0.2f).build()}, Items.CHICKEN));
         add("mutton_from_grass", new AddItemModifier(new LootItemCondition[]{
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
-                LootItemRandomChanceCondition.randomChance(0.05f).build()}, Items.MUTTON));
+                LootItemRandomChanceCondition.randomChance(0.2f).build()}, Items.MUTTON));
         add("pork_from_grass", new AddItemModifier(new LootItemCondition[]{
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(Blocks.GRASS).build(),
-                LootItemRandomChanceCondition.randomChance(0.05f).build()}, Items.PORKCHOP));
+                LootItemRandomChanceCondition.randomChance(0.2f).build()}, Items.PORKCHOP));
 
         add("doll_from_plains_house", new AddItemModifier(new LootItemCondition[]{
                 LootItemRandomChanceCondition.randomChance(0.15f).build(),
