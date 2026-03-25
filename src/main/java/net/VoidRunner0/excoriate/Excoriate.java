@@ -3,6 +3,7 @@ package net.VoidRunner0.excoriate;
 import com.mojang.logging.LogUtils;
 import net.VoidRunner0.excoriate.block.ModBlocks;
 import net.VoidRunner0.excoriate.item.ModItems;
+import net.VoidRunner0.excoriate.loot.ModLootModifiers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.item.ItemProperties;
@@ -38,6 +39,7 @@ public class Excoriate {
         //Register things here:
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
