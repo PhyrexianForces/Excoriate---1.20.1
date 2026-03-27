@@ -37,10 +37,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
         add("doll_from_plains_house", new AddItemModifier(new LootItemCondition[]{
                 LootItemRandomChanceCondition.randomChance(0.65f).build(),
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/village_plains_house")).build()}, ModItems.DOLL.get()));
-        add("doll_from_desert_house", new AddItemModifier(new LootItemCondition[]{
-                LootItemRandomChanceCondition.randomChance(0.65f).build(),
-                new LootTableIdCondition.Builder(new ResourceLocation("chests/village_desert_house")).build()}, ModItems.DOLL.get()));
+                new LootTableIdCondition.Builder(new ResourceLocation("minecraft:chests/village_plains_house")).build()}, ModItems.DOLL.get()));
         add("doll_from_taiga_house", new AddItemModifier(new LootItemCondition[]{
                 LootItemRandomChanceCondition.randomChance(0.65f).build(),
                 new LootTableIdCondition.Builder(new ResourceLocation("minecraft:chests/village_taiga_house")).build()}, ModItems.DOLL.get()));
