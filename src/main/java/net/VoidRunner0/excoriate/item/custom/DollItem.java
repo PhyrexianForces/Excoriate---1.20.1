@@ -15,19 +15,29 @@ public class DollItem extends Item {
     @Override
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
         CompoundTag tag = pStack.getOrCreateTag();
-        String state;
 
-        if (Excoriate.ModState.Attention <= 5) state = "unseen";
-        else if (Excoriate.ModState.Attention <= 10) state = "noticed";
-        else if (Excoriate.ModState.Attention <= 15) state = "watching";
-        else state = "focused";
-
-        if (!tag.contains(state)) {
-            tag.remove("unseen");
-            tag.remove("noticed");
-            tag.remove("watching");
-            tag.remove("focused");
-            tag.putBoolean(state, true);
+        if (!pEntity.level().isClientSide) {
+            if (Excoriate.ModState.Attention <= 5) {
+                pStack.getOrCreateTag().putBoolean("unseen", true);
+                pStack.getOrCreateTag().remove("noticed");
+                pStack.getOrCreateTag().remove("watching");
+                pStack.getOrCreateTag().remove("focused");
+            } else if (Excoriate.ModState.Attention <= 10) {
+                pStack.getOrCreateTag().putBoolean("noticed", true);
+                pStack.getOrCreateTag().remove("unseen");
+                pStack.getOrCreateTag().remove("watching");
+                pStack.getOrCreateTag().remove("focused");
+            } else if (Excoriate.ModState.Attention <= 15) {
+                pStack.getOrCreateTag().putBoolean("watching", true);
+                pStack.getOrCreateTag().remove("unseen");
+                pStack.getOrCreateTag().remove("noticed");
+                pStack.getOrCreateTag().remove("focused");
+            } else {
+                pStack.getOrCreateTag().putBoolean("focused", true);
+                pStack.getOrCreateTag().remove("unseen");
+                pStack.getOrCreateTag().remove("noticed");
+                pStack.getOrCreateTag().remove("watching");
+            }
         }
     }
 }
