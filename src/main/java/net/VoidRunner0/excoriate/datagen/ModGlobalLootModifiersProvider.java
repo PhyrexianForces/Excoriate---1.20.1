@@ -36,10 +36,11 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 LootItemRandomChanceCondition.randomChance(0.2f).build()}, Items.PORKCHOP));
 
         add("doll_from_plains_house", new AddItemModifier(new LootItemCondition[]{
-                LootItemRandomChanceCondition.randomChance(0.65f).build(),
-                new LootTableIdCondition.Builder(new ResourceLocation("minecraft:chests/village_plains_house")).build()}, ModItems.DOLL.get()));
+                        LootItemRandomChanceCondition.randomChance(0.65f).build(),
+                        LootTableIdCondition.builder(new ResourceLocation("minecraft:chests/village/village_plains_house")).build()}, ModItems.DOLL.get()));
+
         add("doll_from_taiga_house", new AddItemModifier(new LootItemCondition[]{
-                LootItemRandomChanceCondition.randomChance(0.65f).build(),
-                new LootTableIdCondition.Builder(new ResourceLocation("minecraft:chests/village_taiga_house")).build()}, ModItems.DOLL.get()));
+                        LootItemRandomChanceCondition.randomChance(0.65f).build(),
+                        LootTableIdCondition.builder(new ResourceLocation("minecraft:chests/village/village_taiga_house")).build()}, ModItems.DOLL.get()));
     }
 }
